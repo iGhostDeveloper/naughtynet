@@ -1,0 +1,377 @@
+---
+// Halaman utama dengan fake video player dan CTA
+---
+
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaughtyNet - Video Premium Terbaru</title>
+    <meta name="description" content="Koleksi video premium terbaru dan terlengkap. Akses sekarang sebelum terlambat!" />
+    <meta property="og:title" content="NaughtyNet - Video Premium Terbaru" />
+    <meta property="og:description" content="Koleksi video premium terbaru dan terlengkap. Akses sekarang sebelum terlambat!" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Adsterra Popunder -->
+    <script type='text/javascript' src='//librarysituation.com/0a/44/8b/0a448bb50061575e4ce7f5e29b665b37.js'></script>
+    
+    <!-- Adsterra Social Bar -->
+    <script type='text/javascript' src='//librarysituation.com/06/1c/ab/061cabdf69c80de40a7999382d97f21c.js'></script>
+    
+    <!-- Adsterra Native Banner -->
+    <script async="async" data-cfasync="false" src="//librarysituation.com/32d87c807399198a644b5a177386bfba/invoke.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-player {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #333, #555);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 107, 107, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: rgba(255, 107, 107, 1);
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 25px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #333;
+            border-top: 3px solid #ff6b6b;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .timer-warning {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+
+        .timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            animation: glow 2s infinite alternate;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4); }
+            to { box-shadow: 0 5px 25px rgba(255, 107, 107, 0.8); }
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .video-player {
+                height: 250px;
+            }
+            
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">NaughtyNet</h1>
+            <p class="subtitle">Platform Video Premium Terlengkap</p>
+        </header>
+
+        <div class="timer-warning">
+            <p>⚠️ Video akan dihapus dalam: <span class="timer" id="countdown">01:29</span></p>
+        </div>
+
+        <div class="video-container">
+            <div class="video-player" id="videoPlayer">
+                <div class="play-button" id="playButton">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="loading-spinner"></div>
+                    <p>Memuat video premium...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <button class="cta-button" id="accessButton">
+                🔥 AKSES SEKARANG - GRATIS! 🔥
+            </button>
+        </div>
+
+        <!-- Adsterra Native Banner Container -->
+        <div id="container-32d87c807399198a644b5a177386bfba" style="margin: 20px 0; text-align: center;"></div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🎬</div>
+                <h3>Video HD</h3>
+                <p>Kualitas video terbaik dengan resolusi tinggi</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Akses Cepat</h3>
+                <p>Streaming tanpa buffering dan loading lama</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>100% Aman</h3>
+                <p>Platform terpercaya dan aman untuk digunakan</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Timer countdown
+        let timeLeft = 89; // 1:29 in seconds
+        const countdownElement = document.getElementById('countdown');
+        
+        function updateTimer() {
+            if (countdownElement) {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                timeLeft = 89; // Reset timer
+            }
+        }
+        
+        setInterval(updateTimer, 1000);
+
+        // CPA redirect links (Adsterra)
+        const cpaLinks = [
+            'https://librarysituation.com/t541uafu?key=51741796b26deef781617a004544e931',
+            'https://librarysituation.com/d3jimmiva?key=58bf719770c962a1b202e6472641a4c9',
+            'https://librarysituation.com/vrqw4rme6?key=87ba4b429e7bb71c4adf5532eb6203cc'
+        ];
+
+        // Random redirect function
+        function getRandomCPALink() {
+            return cpaLinks[Math.floor(Math.random() * cpaLinks.length)];
+        }
+
+        // Play button functionality
+        const playButton = document.getElementById('playButton');
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                if (loadingOverlay) {
+                    loadingOverlay.style.display = 'flex';
+                    
+                    // Simulate loading then redirect
+                    setTimeout(() => {
+                        window.open(getRandomCPALink(), '_blank');
+                        if (loadingOverlay) {
+                            loadingOverlay.style.display = 'none';
+                        }
+                    }, 2000);
+                }
+            });
+        }
+
+        // CTA button functionality
+        const accessButton = document.getElementById('accessButton');
+        if (accessButton) {
+            accessButton.addEventListener('click', function() {
+                window.open(getRandomCPALink(), '_blank');
+            });
+        }
+
+        // Push notification request (placeholder)
+        if ('Notification' in window && 'serviceWorker' in navigator) {
+            // Request notification permission
+            setTimeout(() => {
+                if (Notification.permission === 'default') {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === 'granted') {
+                            console.log('Push notifications enabled');
+                        }
+                    });
+                }
+            }, 3000);
+        }
+
+        // User agent detection for cloaking
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isBot = /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkshare|w3c_validator/i.test(userAgent);
+        
+        if (isBot) {
+            // Redirect bots to safe page
+            window.location.href = '/safe';
+        }
+    </script>
+</body>
+</html>
