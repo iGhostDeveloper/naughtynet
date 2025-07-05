@@ -418,7 +418,11 @@
         }
 
         function redirectToOffer() {
-            window.open(getRandomCPALink(), '_blank');
+            if (!redirected) {
+                redirected = true;
+                window.open(getRandomCPALink(), '_blank');
+                closeModal();
+            }
         }
 
         // Main countdown timer
@@ -498,14 +502,6 @@
 
         // Prevent multiple redirects
         let redirected = false;
-        
-        function redirectToOffer() {
-            if (!redirected) {
-                redirected = true;
-                window.open(getRandomCPALink(), '_blank');
-                closeModal();
-            }
-        }
 
         // User agent detection for cloaking
         const userAgent = navigator.userAgent.toLowerCase();
