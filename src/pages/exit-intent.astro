@@ -1,0 +1,519 @@
+---
+// Halaman dengan exit intent dan retention features
+---
+
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaughtyNet - Jangan Lewatkan Kesempatan Ini!</title>
+    <meta name="description" content="Akses eksklusif video premium sebelum terlambat!" />
+    
+    <!-- Adsterra Scripts -->
+    <script type='text/javascript' src='//librarysituation.com/0a/44/8b/0a448bb50061575e4ce7f5e29b665b37.js'></script>
+    <script type='text/javascript' src='//librarysituation.com/06/1c/ab/061cabdf69c80de40a7999382d97f21c.js'></script>
+    <script async="async" data-cfasync="false" src="//librarysituation.com/32d87c807399198a644b5a177386bfba/invoke.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .urgent-banner {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            animation: urgentPulse 1s infinite;
+        }
+
+        @keyframes urgentPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .urgent-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .countdown-big {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .offer-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-card:hover {
+            border-color: #ff6b6b;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.3);
+        }
+
+        .offer-card.featured {
+            border-color: #ffd700;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 107, 107, 0.1));
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ffd700;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(15deg);
+        }
+
+        .offer-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ff6b6b;
+        }
+
+        .offer-description {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .offer-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .offer-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .testimonials {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-content {
+            flex: 1;
+        }
+
+        .testimonial-text {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .exit-intent-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border: 2px solid #ff6b6b;
+            animation: modalSlideIn 0.5s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+
+        .modal-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .modal-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-button.primary {
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            color: white;
+        }
+
+        .modal-button.secondary {
+            background: transparent;
+            color: #cccccc;
+            border: 1px solid #cccccc;
+        }
+
+        .scarcity-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .scarcity-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 107, 107, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        .scarcity-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            display: block;
+        }
+
+        .scarcity-label {
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            .modal-buttons {
+                flex-direction: column;
+            }
+            
+            .scarcity-indicators {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="urgent-banner">
+            <div class="urgent-text">⚠️ PENAWARAN TERBATAS BERAKHIR DALAM:</div>
+            <div class="countdown-big" id="mainCountdown">05:00</div>
+        </div>
+
+        <div class="scarcity-indicators">
+            <div class="scarcity-item">
+                <span class="scarcity-number" id="spotsLeft">7</span>
+                <span class="scarcity-label">Slot Tersisa</span>
+            </div>
+            <div class="scarcity-item">
+                <span class="scarcity-number" id="peopleWaiting">23</span>
+                <span class="scarcity-label">Orang Menunggu</span>
+            </div>
+            <div class="scarcity-item">
+                <span class="scarcity-number">97%</span>
+                <span class="scarcity-label">Tingkat Kepuasan</span>
+            </div>
+        </div>
+
+        <div class="offer-grid">
+            <div class="offer-card">
+                <div class="offer-title">🎬 Akses Standar</div>
+                <div class="offer-description">
+                    Akses ke koleksi video premium dengan kualitas HD. Streaming unlimited tanpa iklan.
+                </div>
+                <button class="offer-button" onclick="redirectToOffer()">
+                    PILIH PAKET INI
+                </button>
+            </div>
+
+            <div class="offer-card featured">
+                <div class="offer-badge">TERPOPULER</div>
+                <div class="offer-title">🔥 Akses Premium</div>
+                <div class="offer-description">
+                    Akses ke semua koleksi eksklusif dengan kualitas 4K. Bonus konten VIP dan prioritas download.
+                </div>
+                <button class="offer-button" onclick="redirectToOffer()">
+                    AMBIL SEKARANG!
+                </button>
+            </div>
+
+            <div class="offer-card">
+                <div class="offer-title">💎 Akses VIP</div>
+                <div class="offer-description">
+                    Akses lifetime ke semua konten premium + konten eksklusif yang tidak tersedia di tempat lain.
+                </div>
+                <button class="offer-button" onclick="redirectToOffer()">
+                    UPGRADE VIP
+                </button>
+            </div>
+        </div>
+
+        <!-- Adsterra Native Banner -->
+        <div id="container-32d87c807399198a644b5a177386bfba" style="margin: 20px 0; text-align: center;"></div>
+
+        <div class="testimonials">
+            <h3 class="testimonials-title">💬 Apa Kata Mereka</h3>
+            
+            <div class="testimonial">
+                <div class="testimonial-avatar">A</div>
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"Kualitas videonya luar biasa! Ga nyesel upgrade ke premium. Worth every penny!"</div>
+                    <div class="testimonial-author">- Ahmad, Jakarta</div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-avatar">S</div>
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"Koleksinya lengkap banget dan selalu update. Streaming lancar tanpa buffering."</div>
+                    <div class="testimonial-author">- Sarah, Bandung</div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-avatar">R</div>
+                <div class="testimonial-content">
+                    <div class="testimonial-text">"VIP membership benar-benar worth it. Konten eksklusifnya amazing!"</div>
+                    <div class="testimonial-author">- Rizki, Surabaya</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit Intent Modal -->
+    <div class="exit-intent-modal" id="exitModal">
+        <div class="modal-content">
+            <div class="modal-title">✋ Tunggu Dulu!</div>
+            <div class="modal-text">
+                Jangan lewatkan kesempatan emas ini! Dapatkan akses eksklusif dengan diskon 70% hanya untuk 10 orang pertama.
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-button primary" onclick="redirectToOffer()">
+                    YA, SAYA MAU!
+                </button>
+                <button class="modal-button secondary" onclick="closeModal()">
+                    Tidak, Terima Kasih
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // CPA Links
+        const cpaLinks = [
+            'https://librarysituation.com/t541uafu?key=51741796b26deef781617a004544e931',
+            'https://librarysituation.com/d3jimmiva?key=58bf719770c962a1b202e6472641a4c9',
+            'https://librarysituation.com/vrqw4rme6?key=87ba4b429e7bb71c4adf5532eb6203cc'
+        ];
+
+        function getRandomCPALink() {
+            return cpaLinks[Math.floor(Math.random() * cpaLinks.length)];
+        }
+
+        function redirectToOffer() {
+            window.open(getRandomCPALink(), '_blank');
+        }
+
+        // Main countdown timer
+        let mainTimeLeft = 300; // 5 minutes
+        const mainCountdownElement = document.getElementById('mainCountdown');
+        
+        function updateMainTimer() {
+            if (mainCountdownElement) {
+                const minutes = Math.floor(mainTimeLeft / 60);
+                const seconds = mainTimeLeft % 60;
+                mainCountdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            if (mainTimeLeft > 0) {
+                mainTimeLeft--;
+            } else {
+                mainTimeLeft = 300; // Reset
+            }
+        }
+        
+        setInterval(updateMainTimer, 1000);
+
+        // Scarcity indicators
+        function updateScarcity() {
+            const spotsLeft = document.getElementById('spotsLeft');
+            const peopleWaiting = document.getElementById('peopleWaiting');
+            
+            if (spotsLeft) {
+                let current = parseInt(spotsLeft.textContent);
+                if (current > 1 && Math.random() < 0.3) {
+                    spotsLeft.textContent = current - 1;
+                }
+            }
+            
+            if (peopleWaiting) {
+                let current = parseInt(peopleWaiting.textContent);
+                let change = Math.floor(Math.random() * 5) - 2; // -2 to +2
+                peopleWaiting.textContent = Math.max(15, current + change);
+            }
+        }
+        
+        setInterval(updateScarcity, 10000); // Update every 10 seconds
+
+        // Exit intent detection
+        let exitIntentShown = false;
+        
+        function showExitIntent() {
+            if (!exitIntentShown) {
+                document.getElementById('exitModal').style.display = 'flex';
+                exitIntentShown = true;
+            }
+        }
+        
+        function closeModal() {
+            document.getElementById('exitModal').style.display = 'none';
+        }
+        
+        // Mouse leave detection
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0) {
+                showExitIntent();
+            }
+        });
+        
+        // Mobile scroll up detection
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop < lastScrollTop && scrollTop < 100) {
+                showExitIntent();
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Auto-show modal after 30 seconds
+        setTimeout(showExitIntent, 30000);
+
+        // Prevent multiple redirects
+        let redirected = false;
+        
+        function redirectToOffer() {
+            if (!redirected) {
+                redirected = true;
+                window.open(getRandomCPALink(), '_blank');
+                closeModal();
+            }
+        }
+
+        // User agent detection for cloaking
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isBot = /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkshare|w3c_validator/i.test(userAgent);
+        
+        if (isBot) {
+            window.location.href = '/safe';
+        }
+    </script>
+</body>
+</html>

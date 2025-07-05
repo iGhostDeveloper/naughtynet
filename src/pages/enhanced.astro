@@ -1,0 +1,710 @@
+---
+// Halaman enhanced dengan fake comments dan social proof
+---
+
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaughtyNet - Video Premium Terbaru</title>
+    <meta name="description" content="Koleksi video premium terbaru dan terlengkap. Akses sekarang sebelum terlambat!" />
+    <meta property="og:title" content="NaughtyNet - Video Premium Terbaru" />
+    <meta property="og:description" content="Koleksi video premium terbaru dan terlengkap. Akses sekarang sebelum terlambat!" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Adsterra Popunder -->
+    <script type='text/javascript' src='//librarysituation.com/0a/44/8b/0a448bb50061575e4ce7f5e29b665b37.js'></script>
+    
+    <!-- Adsterra Social Bar -->
+    <script type='text/javascript' src='//librarysituation.com/06/1c/ab/061cabdf69c80de40a7999382d97f21c.js'></script>
+    
+    <!-- Adsterra Native Banner -->
+    <script async="async" data-cfasync="false" src="//librarysituation.com/32d87c807399198a644b5a177386bfba/invoke.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 20px;
+        }
+
+        .live-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background: rgba(255, 107, 107, 0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            animation: pulse-glow 2s infinite;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 107, 107, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.6); }
+        }
+
+        .activity-feed {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            max-height: 120px;
+            overflow: hidden;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideIn 0.5s ease;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .activity-text {
+            flex: 1;
+            font-size: 0.9rem;
+        }
+
+        .activity-time {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .video-container {
+            position: relative;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .video-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .video-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
+        .rating-count {
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #333, #555);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 107, 107, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: rgba(255, 107, 107, 1);
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 25px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+
+        .video-info {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .video-stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .stat-icon {
+            color: #ff6b6b;
+        }
+
+        .timer-warning {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+
+        .timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            animation: glow 2s infinite alternate;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4); }
+            to { box-shadow: 0 5px 25px rgba(255, 107, 107, 0.8); }
+        }
+
+        .comments-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comments-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .comments-count {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .comment {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .comment-content {
+            flex: 1;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment-text {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .comment-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .comment-time {
+            color: #888;
+        }
+
+        .comment-likes {
+            color: #ff6b6b;
+            cursor: pointer;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #333;
+            border-top: 3px solid #ff6b6b;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .live-stats {
+                gap: 15px;
+            }
+            
+            .stat-box {
+                padding: 10px 15px;
+            }
+            
+            .video-player {
+                height: 250px;
+            }
+            
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">NaughtyNet</h1>
+            <p class="subtitle">Platform Video Premium Terlengkap</p>
+        </header>
+
+        <div class="live-stats">
+            <div class="stat-box">
+                <span class="stat-number" id="viewCount">2,847,392</span>
+                <span class="stat-label">Total Views</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="onlineCount">3,241</span>
+                <span class="stat-label">Online Now</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="likeCount">98.7%</span>
+                <span class="stat-label">Like Rate</span>
+            </div>
+        </div>
+
+        <div class="activity-feed" id="activityFeed">
+            <!-- Activity items akan di-generate oleh JavaScript -->
+        </div>
+
+        <div class="timer-warning">
+            <p>⚠️ Video akan dihapus dalam: <span class="timer" id="countdown">01:29</span></p>
+        </div>
+
+        <div class="video-container">
+            <div class="video-header">
+                <div class="video-title">Video Premium Eksklusif - Koleksi Terbaru 2024</div>
+                <div class="video-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-count">(4.9/5 - 12,847 votes)</span>
+                </div>
+            </div>
+            
+            <div class="video-player" id="videoPlayer">
+                <div class="play-button" id="playButton">
+                    <div class="play-icon"></div>
+                </div>
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="loading-spinner"></div>
+                    <p>Memuat video premium...</p>
+                </div>
+            </div>
+
+            <div class="video-info">
+                <div class="video-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">👁️</span>
+                        <span id="videoViews">2,847,392 views</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">👍</span>
+                        <span id="videoLikes">281,473 likes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">💬</span>
+                        <span id="videoComments">15,847 comments</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📅</span>
+                        <span>Uploaded today</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <button class="cta-button" id="accessButton">
+                🔥 AKSES SEKARANG - GRATIS! 🔥
+            </button>
+        </div>
+
+        <!-- Adsterra Native Banner Container -->
+        <div id="container-32d87c807399198a644b5a177386bfba" style="margin: 20px 0; text-align: center;"></div>
+
+        <div class="comments-section">
+            <div class="comments-header">
+                <h3 class="comments-title">Komentar</h3>
+                <span class="comments-count" id="commentsCount">15,847 komentar</span>
+            </div>
+            <div id="commentsContainer">
+                <!-- Comments akan di-generate oleh JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Timer countdown
+        let timeLeft = 89;
+        const countdownElement = document.getElementById('countdown');
+        
+        function updateTimer() {
+            if (countdownElement) {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                timeLeft = 89;
+            }
+        }
+        
+        setInterval(updateTimer, 1000);
+
+        // CPA redirect links
+        const cpaLinks = [
+            'https://librarysituation.com/t541uafu?key=51741796b26deef781617a004544e931',
+            'https://librarysituation.com/d3jimmiva?key=58bf719770c962a1b202e6472641a4c9',
+            'https://librarysituation.com/vrqw4rme6?key=87ba4b429e7bb71c4adf5532eb6203cc'
+        ];
+
+        function getRandomCPALink() {
+            return cpaLinks[Math.floor(Math.random() * cpaLinks.length)];
+        }
+
+        // Fake comments data
+        const fakeComments = [
+            { author: "Ahmad_99", text: "Wah mantap banget videonya! Kualitas HD benar-benar jernih 🔥", likes: 234, time: "2 menit lalu" },
+            { author: "Sarah_ID", text: "Akhirnya nemu yang berkualitas! Thanks admin 👍", likes: 189, time: "5 menit lalu" },
+            { author: "Budi_Jakarta", text: "Koleksi terlengkap memang di sini. Recommended!", likes: 156, time: "8 menit lalu" },
+            { author: "Rina_Bdg", text: "Loading cepat banget, ga ada buffering sama sekali", likes: 203, time: "12 menit lalu" },
+            { author: "Doni_Sby", text: "Premium quality memang beda ya. Worth it!", likes: 178, time: "15 menit lalu" },
+            { author: "Maya_Jkt", text: "Udah lama nyari yang kayak gini. Finally! 😍", likes: 267, time: "18 menit lalu" },
+            { author: "Rizki_ID", text: "Kualitas 4K nya mantap banget. Jernih poll!", likes: 145, time: "22 menit lalu" },
+            { author: "Siti_Medan", text: "Ga nyesel deh akses di sini. Koleksinya lengkap", likes: 198, time: "25 menit lalu" }
+        ];
+
+        // Activity feed data
+        const activities = [
+            "User_123 baru saja menonton video premium",
+            "Sarah_ID memberikan rating 5 bintang",
+            "Ahmad_99 menambahkan ke favorit",
+            "Budi_Jakarta berbagi ke teman",
+            "Rina_Bdg mengunduh video HD",
+            "Doni_Sby memberikan like",
+            "Maya_Jkt bergabung sebagai member premium",
+            "Rizki_ID mengomentari video"
+        ];
+
+        function generateComments() {
+            const container = document.getElementById('commentsContainer');
+            if (container) {
+                let html = '';
+                
+                fakeComments.forEach(comment => {
+                    const initial = comment.author.charAt(0).toUpperCase();
+                    html += `
+                        <div class="comment">
+                            <div class="comment-avatar">${initial}</div>
+                            <div class="comment-content">
+                                <div class="comment-author">${comment.author}</div>
+                                <div class="comment-text">${comment.text}</div>
+                                <div class="comment-meta">
+                                    <span class="comment-time">${comment.time}</span>
+                                    <span class="comment-likes">👍 ${comment.likes}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                container.innerHTML = html;
+            }
+        }
+
+        function addActivity() {
+            const feed = document.getElementById('activityFeed');
+            if (feed) {
+                const activity = activities[Math.floor(Math.random() * activities.length)];
+                const username = activity.split(' ')[0];
+                const initial = username.charAt(0).toUpperCase();
+                
+                const activityHTML = `
+                    <div class="activity-item">
+                        <div class="activity-avatar">${initial}</div>
+                        <div class="activity-text">${activity}</div>
+                        <div class="activity-time">Baru saja</div>
+                    </div>
+                `;
+                
+                feed.insertAdjacentHTML('afterbegin', activityHTML);
+                
+                // Remove old activities (keep only 3)
+                const items = feed.querySelectorAll('.activity-item');
+                if (items.length > 3) {
+                    items[items.length - 1].remove();
+                }
+            }
+        }
+
+        function updateStats() {
+            const viewCount = document.getElementById('viewCount');
+            const onlineCount = document.getElementById('onlineCount');
+            const videoViews = document.getElementById('videoViews');
+            const videoLikes = document.getElementById('videoLikes');
+            
+            if (viewCount) {
+                let current = parseInt(viewCount.textContent.replace(/,/g, ''));
+                viewCount.textContent = (current + Math.floor(Math.random() * 10)).toLocaleString();
+            }
+            
+            if (onlineCount) {
+                let current = parseInt(onlineCount.textContent.replace(/,/g, ''));
+                let change = Math.floor(Math.random() * 21) - 10;
+                onlineCount.textContent = Math.max(1000, current + change).toLocaleString();
+            }
+            
+            if (videoViews) {
+                let current = parseInt(videoViews.textContent.split(' ')[0].replace(/,/g, ''));
+                videoViews.textContent = `${(current + Math.floor(Math.random() * 5)).toLocaleString()} views`;
+            }
+            
+            if (videoLikes) {
+                let current = parseInt(videoLikes.textContent.split(' ')[0].replace(/,/g, ''));
+                videoLikes.textContent = `${(current + Math.floor(Math.random() * 3)).toLocaleString()} likes`;
+            }
+        }
+
+        // Play button functionality
+        const playButton = document.getElementById('playButton');
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                if (loadingOverlay) {
+                    loadingOverlay.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        window.open(getRandomCPALink(), '_blank');
+                        if (loadingOverlay) {
+                            loadingOverlay.style.display = 'none';
+                        }
+                    }, 2000);
+                }
+            });
+        }
+
+        // CTA button functionality
+        const accessButton = document.getElementById('accessButton');
+        if (accessButton) {
+            accessButton.addEventListener('click', function() {
+                window.open(getRandomCPALink(), '_blank');
+            });
+        }
+
+        // User agent detection for cloaking
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isBot = /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkshare|w3c_validator/i.test(userAgent);
+        
+        if (isBot) {
+            window.location.href = '/safe';
+        }
+
+        // Initialize
+        generateComments();
+        setInterval(addActivity, 8000); // Add new activity every 8 seconds
+        setInterval(updateStats, 3000); // Update stats every 3 seconds
+    </script>
+</body>
+</html>
